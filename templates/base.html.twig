@@ -1,11 +1,17 @@
+{# templates/base.html.twig #}
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Symfony Project</title>
+    <title>{% block title %}base.twig{% endblock %}</title>
   </head>
   <body>
-    <h1>{{ message }}</h1>
+    <nav>
+      <a href="{{ path('home') }}">Home</a><br>
+      <a href="{{ path('base-home') }}">Same page but only on base twig</a><br>
+      <a href="{{ path('getter', {'name': 'Evgenii Shiliaev'}) }}">Getter (Evgenii Shiliaev)</a><br>
+      <a href="{{ path('lower') }}">Any -> lower</a><br>
+      <a href="{{ path('debug') }}">dump(array)</a><br>
+    </nav>
+    <main>{% block body %}{% endblock %}</main>
   </body>
 </html>

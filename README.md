@@ -1,104 +1,45 @@
-# Symfony Project Template
+# Symfony Basics: Routing, Templates, and Debugging
 
-This repository serves as a template for creating Symfony projects with a fully configured development environment, including Docker-based devcontainer support, Dependabot integration, pre-configured tools, and a deploy workflow for GitHub Pages.
+This repository contains a Symfony project for completing specific exercises designed to build familiarity with Symfony features like controllers, Twig templating, URL parameters, and debugging.
 
-## Features
+## Project Overview
 
-- **Symfony 7**: Modern PHP framework for web applications.
-- **Devcontainer Support**: Run the project in a consistent development environment using Docker.
-- **VSCode Configuration**: Includes recommended extensions and settings for PHP.
-- **Dependabot**: Automated dependency updates for Composer, Docker, and GitHub Actions.
-- **Preconfigured PHPUnit**: Testing framework for unit and functional tests.
-- **Xdebug Configuration**: Preconfigured for debugging with VSCode.
-- **Makefile**: Convenient shortcuts for common tasks.
-- **Deploy Workflow**: GitHub Actions workflow for deploying to GitHub Pages.
+This project is based on the [Symfony template](https://github.com/Jekwwer/symfony-template) and includes tasks that guide through creating a menu, handling URL parameters, setting up Twig templates, and using debugging tools. Each task builds upon Symfony fundamentals and includes practical implementations to reinforce learning.
 
-## Prerequisites
+---
 
-- [Docker](https://docs.docker.com/get-docker/) - Required for the development container.
-- [VSCode](https://code.visualstudio.com/) with the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
+> This project is created as part of an exercise for the VŠPJ course "WT - Webové technologie" (Web Technologies) 2024-2025, Exercise 8.
+
+---
+
+### Tasks Included
+
+1. **Create a Menu in Twig**
+   Set up a navigational menu in Twig to access different exercises within the project.
+
+2. **Define a Getter to Display URL Parameters**
+   Implement a getter function in a Symfony controller to handle and display URL parameters.
+
+3. **Extend Twig Templates**
+   Configure `index.html.twig` to inherit from `base.html.twig` for consistent layout across pages.
+
+4. **Send Uppercase Text to Twig and Apply a Filter**
+   Pass uppercase text from the controller to a Twig template, then apply a filter to make it lowercase in Twig.
+
+5. **Debug Using `dump` in the Controller**
+   Practice debugging by using the `dump()` function in a controller to inspect variables and arrays.
 
 ## Getting Started
 
-1. **Clone this repository**:
+### Prerequisites
 
-   ```bash
-   git clone https://github.com/Jekwwer/symfony-template.git
-   cd symfony-template
-   ```
-
-2. **Open in VSCode**:
-
-   - Open VSCode and use the `Remote - Containers` extension to open the folder in the devcontainer.
-   - VSCode will automatically build the Docker container and install the necessary dependencies.
-
-3. **Run the Application**:
-
-   - Start the Symfony server by running:
-
-     ```bash
-     make serve
-     ```
-
-   - The application will be available at `http://localhost:8000`.
-
-## Debugging with Xdebug
-
-This template includes Xdebug for PHP debugging. Xdebug is configured to listen for incoming connections, making it easy to debug with VSCode.
-
-> Note: For phpmd, it’s necessary to start debugging; otherwise, the pre-commit hook will fail.
-
-## Project Structure
-
-- **`src/`**: Symfony application source code.
-- **`tests/`**: PHPUnit tests.
-- **`templates/`**: Twig templates for HTML rendering.
-- **`.devcontainer/`**: Docker and devcontainer configuration files.
-- **`.env`** and **`.env.test`**: Environment variable files for development and testing.
-- **`.github/dependabot.yml`**: Dependabot configuration for automated dependency updates.
-- **`.github/workflows/deploy.yml`**: GitHub Actions workflow for deploying the project to GitHub Pages.
-
-## Available Commands
-
-You can use the following commands from the Makefile:
-
-- **`make install`** - Install PHP dependencies via Composer.
-- **`make serve`** - Start the Symfony server.
-- **`make test`** - Run tests with PHPUnit.
-- **`make coverage`** - Run tests with coverage report.
-- **`make cache-clear`** - Clear Symfony cache.
-
-## Testing
-
-This template includes a PHPUnit setup. To run tests, use:
+Ensure you have PHP, Composer, and Symfony CLI installed. Clone this repository and run the following commands to set up the environment:
 
 ```bash
-make test
+# Start the Symfony server
+make serve
 ```
 
-To check test coverage:
+### Usage
 
-```bash
-make coverage
-```
-
-## Automated Dependency Updates
-
-This template uses Dependabot to keep dependencies up-to-date:
-
-- **Docker**: `.devcontainer` Docker dependencies.
-- **GitHub Actions**: `.github` workflows.
-- **Composer**: PHP dependencies.
-
-## Deployment
-
-This project includes a deploy workflow to publish the application to GitHub Pages. It builds a static version of the Symfony application and deploys it to the `gh-pages` branch.
-You can view the deployed application [here](https://jekwwer.github.io/symfony-template/).
-
-## Customizing
-
-Feel free to modify this template to suit your project's needs. You can add new Symfony bundles, customize configurations, or expand the Docker setup as required.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Each exercise is accessible through specific routes defined in the controllers. Navigate through the application by visiting the appropriate URLs or using the menu configured in `base.html.twig`.
