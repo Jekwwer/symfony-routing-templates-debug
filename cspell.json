@@ -1,0 +1,26 @@
+{
+  "version": "0.2",
+  "language": "en,cs",
+  "words": [
+    "Evgenii",
+    "Jekwwer",
+    "peaceiris",
+    "Shiliaev",
+    "shivammathur",
+    "Symfony",
+    "VŠPJ"
+  ],
+  "ignorePaths": [
+    "*.ini",
+    "*.json",
+    "*.lock",
+    "*.yaml",
+    "*.yml",
+    "*.xml",
+    "*.xml.dist",
+    ".devcontainer/*",
+    ".env*",
+    ".git*",
+    "node_modules/*"
+  ]
+}
