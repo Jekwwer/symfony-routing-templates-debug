@@ -1,6 +1,6 @@
 {
-  "name": "your-username/symfony-template",
-  "description": "A template for Symfony projects",
+  "name": "jekwwer/symfony-routing-templates-debug",
+  "description": "A Symfony project focused on foundational exercises in routing, template inheritance, and debugging.",
   "type": "project",
   "license": "MIT",
   "minimum-stability": "stable",
