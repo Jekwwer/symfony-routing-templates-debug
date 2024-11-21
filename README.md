@@ -33,12 +33,58 @@ This project is based on the [Symfony template](https://github.com/Jekwwer/symfo
 
 ### Prerequisites
 
-Ensure you have PHP, Composer, and Symfony CLI installed. Clone this repository and run the following commands to set up the environment:
+#### **Local Development**
+
+<details>
+<summary>Click to expand for details</summary>
+
+To run the project locally, ensure the following tools are installed on your machine:
+
+1. **PHP**: Version 8.2 or higher.
+2. **Composer**: For managing PHP dependencies.
+3. **Symfony CLI**: For running the Symfony server and managing the project.
+
+Steps to set up the project locally:
 
 ```bash
+# Clone the repository
+git clone https://github.com/Jekwwer/symfony-routing-templates-debug.git
+cd symfony-routing-templates-debug
+
+# Install dependencies
+make install
+
 # Start the Symfony server
 make serve
 ```
+
+</details>
+
+#### **Devcontainer**
+
+<details>
+<summary>Click to expand for details</summary>
+
+For those using **VS Code** with Devcontainer support:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Jekwwer/symfony-routing-templates-debug.git
+cd symfony-routing-templates-debug
+```
+
+2. Open the project in VS Code.
+
+3. When prompted, reopen the project in the Devcontainer environment.
+
+4. Once the Devcontainer is initialized, start the Symfony server using the provided Makefile:
+
+```bash
+  make serve
+```
+
+</details>
 
 ### Usage
 
